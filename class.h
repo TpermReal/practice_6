@@ -41,7 +41,7 @@ public:
 //构造函数
     ~CTriangle();
     //析构函数
-    //面积计算函数
+
 };
 
 #endif //PRACTICE_6_CLASS_H

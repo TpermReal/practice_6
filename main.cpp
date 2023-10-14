@@ -9,7 +9,7 @@ int main() {
 
     // 计算并输出三角形面积
     double area = tri.Area();
-    cout << "The area of the triangle is: " << area << endl;
+    cout << "三角形面积为： " << area << endl;
 
     // 重新设置三角形，并计算并输出三角形面积
     CPoint p4(1,1);
