@@ -6,39 +6,36 @@
 #define PRACTICE_6_CLASS_H
 
 class CPoint {
-public:
+private:
     int mX, mY;
 
+public:
     CPoint(int zX = 0, int zY = 0);
-
     ~CPoint();
-
     int GetX() const;
-
 //横坐标提取操作函数
     int GetY() const;
-
 //纵坐标提取操作函数
     double Distance(const CPoint &zP) const;
-
     void SetPoint(int zX, int zY);
     //设置操作函数
     //点间距离计算函数
 };
 
 class CTriangle {
-public:
+private:
     CPoint mVertex[3];
 
+public:
+    //设置操作函数
     void SetTriangle(const CPoint &zP1, const CPoint &zP2, const CPoint &zP3);
 
-//设置操作数
+// 面积计算函数
     double Area() const;
-
+    //构造函数
     CTriangle(const CPoint &zP1 = CPoint(0, 0), const CPoint &zP2 = CPoint(0, 1), const CPoint
     &zP3 = CPoint(1, 0));
 
-//构造函数
     ~CTriangle();
     //析构函数
 

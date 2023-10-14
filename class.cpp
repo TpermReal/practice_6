@@ -3,6 +3,16 @@
 //
 #include "class.h"
 #include<bits/stdc++.h>
+//构造函数
+CPoint::CPoint(int zX, int zY){
+    mX=zX;
+    mY=zY;
+}
+//析构函数
+CPoint::~CPoint(){
+    mX=mY=0;
+}
+
 
 //设置操作函数
 void CPoint::SetPoint(int zX, int zY) {
@@ -23,6 +33,18 @@ int CPoint::GetY() const {
 //点间距离计算函数
 double CPoint::Distance(const CPoint &zP) const {
     return sqrt((mX - zP.mX) * (mX - zP.mX) + (mY - zP.mY) * (mY - zP.mY));
+}
+//构造函数
+CTriangle::CTriangle(const CPoint &zP1, const CPoint &zP2, const CPoint &zP3) {
+    mVertex[0].SetPoint(zP1.GetX(), zP1.GetY());
+    mVertex[1].SetPoint(zP2.GetX(), zP2.GetY());
+    mVertex[2].SetPoint(zP3.GetX(), zP3.GetY());
+}
+//析构函数
+CTriangle::~CTriangle() {
+    mVertex[0].SetPoint(0, 0);
+    mVertex[1].SetPoint(0, 0);
+    mVertex[2].SetPoint(0, 0);
 }
 
 //设置三角形坐标操作函数
