@@ -17,5 +17,6 @@ int main() {
     CPoint p6(1,2);
     tri.SetTriangle(p4, p5, p6);
     area = tri.Area();
-    cout << "After resetting, the area of the triangle is: " << area << endl;
+    cout << "三角形面积为： " << area << endl;
+    return 0;
 }
